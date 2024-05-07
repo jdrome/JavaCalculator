@@ -8,6 +8,8 @@ public class JavaCalculator implements ActionListener {
     JTextField textField;
     JButton[] numberButtons = new JButton[10];
     JButton[] functionButtons = new JButton[8];
+    JButton[] addButton, subButton, mulButton, divButton;
+    JButton[] decButton, equButton, delButton, clrButton;
     
     JavaCalculator() {
 
