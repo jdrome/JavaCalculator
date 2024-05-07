@@ -10,6 +10,7 @@ public class JavaCalculator implements ActionListener {
     JButton[] functionButtons = new JButton[8];
     JButton[] addButton, subButton, mulButton, divButton;
     JButton[] decButton, equButton, delButton, clrButton;
+    JPanel panel; // Holds all our buttons
     
     JavaCalculator() {
 
