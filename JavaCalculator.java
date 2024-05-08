@@ -13,6 +13,8 @@ public class JavaCalculator implements ActionListener {
     JPanel panel; // Holds all our buttons
 
     Font myFont = new Font("Nanum Pen Script", Font.BOLD, 30);
+
+    double num1 = 0, num2 = 0, result = 0;
     
     JavaCalculator() {
 
