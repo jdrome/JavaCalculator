@@ -25,7 +25,7 @@ public class JavaCalculator implements ActionListener {
         frame.setVisible(true);
     }
     public static void main (String[] args) {
-
+        JavaCalculator calculator = new JavaCalculator();
     }
     @Override
     public void actionPerformed(ActionEvent e) {
