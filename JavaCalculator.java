@@ -15,6 +15,7 @@ public class JavaCalculator implements ActionListener {
     Font myFont = new Font("Nanum Pen Script", Font.BOLD, 30);
 
     double num1 = 0, num2 = 0, result = 0;
+    char operator; // This will be for our operations like addition, subtraction, etc.
     
     JavaCalculator() {
 
