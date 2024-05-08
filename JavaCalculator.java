@@ -21,7 +21,8 @@ public class JavaCalculator implements ActionListener {
         frame = new JFrame("Calculator");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420, 550);
-        frame.setLayout(null);
+        frame.setLayout(null); // no layout for now
+        frame.setVisible(true);
     }
     public static void main (String[] args) {
 
