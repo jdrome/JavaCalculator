@@ -26,6 +26,7 @@ public class JavaCalculator implements ActionListener {
         textField = new JTextField();
         textField.setBounds(60, 25, 300, 50);
         textField.setFont(myFont);
+        textField.setEditable(false);
 
         frame.add(textField); // adds textField to frame
         frame.setVisible(true);
