@@ -11,6 +11,8 @@ public class JavaCalculator implements ActionListener {
     JButton[] addButton, subButton, mulButton, divButton;
     JButton[] decButton, equButton, delButton, clrButton;
     JPanel panel; // Holds all our buttons
+
+    Font myFont = new Font("Nanum Pen Script", Font.BOLD, 30);
     
     JavaCalculator() {
 
