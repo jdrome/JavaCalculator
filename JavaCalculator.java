@@ -18,7 +18,10 @@ public class JavaCalculator implements ActionListener {
     char operator; // This will be for our operations like addition, subtraction, etc.
     
     JavaCalculator() {
-
+        frame = new JFrame("Calculator");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(420, 550);
+        frame.setLayout(null);
     }
     public static void main (String[] args) {
 
