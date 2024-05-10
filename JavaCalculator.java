@@ -38,6 +38,7 @@ public class JavaCalculator implements ActionListener {
         delButton = new JButton("Del");
         clrButton = new JButton("Clr");
 
+        // Adds JButtons to functioButtons array
         functionButtons[0] = addButton;
         functionButtons[1] = subButton;
         functionButtons[2] = mulButton;
@@ -46,6 +47,12 @@ public class JavaCalculator implements ActionListener {
         functionButtons[5] = equButton;
         functionButtons[6] = delButton;
         functionButtons[7] = clrButton;
+
+        for(int i = 0; i < 8; i++) {
+            functionButtons[i].addActionListener(this);
+            functionButtons[i].setFont(myFont);
+            functionButtons[i].setFocusable(false); // Removes outliner on button
+        }
 
         frame.add(textField); // adds textField to frame
         frame.setVisible(true);
