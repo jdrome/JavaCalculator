@@ -65,6 +65,11 @@ public class JavaCalculator implements ActionListener {
             numberButtons[i].setFocusable(false); // Removes outliner on button
         }
 
+        delButton.setBounds(50, 430, 145, 50);
+        clrButton.setBounds(205, 430, 145, 50);
+
+        frame.add(delButton);
+        frame.add(clrButton);
         frame.add(textField); // adds textField to frame
         frame.setVisible(true);
     }
