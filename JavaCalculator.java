@@ -8,8 +8,8 @@ public class JavaCalculator implements ActionListener {
     JTextField textField;
     JButton[] numberButtons = new JButton[10];
     JButton[] functionButtons = new JButton[8];
-    JButton[] addButton, subButton, mulButton, divButton;
-    JButton[] decButton, equButton, delButton, clrButton;
+    JButton addButton, subButton, mulButton, divButton;
+    JButton decButton, equButton, delButton, clrButton;
     JPanel panel; // Holds all our buttons
 
     Font myFont = new Font("Nanum Pen Script", Font.BOLD, 30);
@@ -27,6 +27,16 @@ public class JavaCalculator implements ActionListener {
         textField.setBounds(60, 25, 300, 50);
         textField.setFont(myFont);
         textField.setEditable(false);
+
+        // Instantiating Function Buttons to Frame
+        addButton = new JButton("+");
+        subButton = new JButton("-");
+        mulButton = new JButton("*");
+        divButton = new JButton("/");
+        decButton = new JButton(".");
+        equButton = new JButton("=");
+        delButton = new JButton("Del");
+        clrButton = new JButton("Clr");
 
         frame.add(textField); // adds textField to frame
         frame.setVisible(true);
