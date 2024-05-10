@@ -45,6 +45,7 @@ public class JavaCalculator implements ActionListener {
         functionButtons[4] = decButton;
         functionButtons[5] = equButton;
         functionButtons[6] = delButton;
+        functionButtons[7] = clrButton;
 
         frame.add(textField); // adds textField to frame
         frame.setVisible(true);
