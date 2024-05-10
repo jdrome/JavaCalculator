@@ -31,6 +31,7 @@ public class JavaCalculator implements ActionListener {
         textField.setEditable(false);
 
         // Instantiating Function Buttons to Frame
+        // Note: All buttons except delButton and clrButton will go in JPanel. delButton and clrButton will sit in the frame independent of the other function and number buttons.
         addButton = new JButton("+");
         subButton = new JButton("-");
         mulButton = new JButton("*");
@@ -68,9 +69,10 @@ public class JavaCalculator implements ActionListener {
         delButton.setBounds(50, 430, 145, 50);
         clrButton.setBounds(205, 430, 145, 50);
 
+        // Add our different elements to our JFrame.
         frame.add(delButton);
         frame.add(clrButton);
-        frame.add(textField); // adds textField to frame
+        frame.add(textField);
         frame.setVisible(true);
     }
     public static void main (String[] args) {
