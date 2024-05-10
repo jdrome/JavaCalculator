@@ -18,11 +18,13 @@ public class JavaCalculator implements ActionListener {
     char operator; // This will be for our operations like addition, subtraction, etc.
     
     JavaCalculator() {
+        // Instantiate `Calculator` JFrame in constructor.
         frame = new JFrame("Calculator");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420, 550);
         frame.setLayout(null); // no layout for now
 
+        // Instantiate textField in Constructor
         textField = new JTextField();
         textField.setBounds(60, 25, 300, 50);
         textField.setFont(myFont);
@@ -48,10 +50,19 @@ public class JavaCalculator implements ActionListener {
         functionButtons[6] = delButton;
         functionButtons[7] = clrButton;
 
+        // `For` loop iterates through all function buttons and ActionListener, font, and focusable settings.
         for(int i = 0; i < 8; i++) {
             functionButtons[i].addActionListener(this);
             functionButtons[i].setFont(myFont);
             functionButtons[i].setFocusable(false); // Removes outliner on button
+        }
+
+        // Instantiates number buttons with `for` loop. Also instantiates settings for number burrons
+        for(int i = 0; i < 10; i++) {
+            numberButtons[i] = new JButton(String.valueOf(i)); // Instantiates number buttons here
+            numberButtons[i].addActionListener(this);
+            numberButtons[i].setFont(myFont);
+            numberButtons[i].setFocusable(false); // Removes outliner on button
         }
 
         frame.add(textField); // adds textField to frame
