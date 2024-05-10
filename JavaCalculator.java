@@ -42,6 +42,7 @@ public class JavaCalculator implements ActionListener {
         functionButtons[1] = subButton;
         functionButtons[2] = mulButton;
         functionButtons[3] = divButton;
+        functionButtons[4] = decButton;
 
         frame.add(textField); // adds textField to frame
         frame.setVisible(true);
