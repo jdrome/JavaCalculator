@@ -73,8 +73,9 @@ public class JavaCalculator implements ActionListener {
         // Instantiates panel to hold buttons
         panel = new JPanel();
         panel.setBounds(60, 100, 300, 300);
-        panel.setLayout(new GridLayout(4,4, 10, 10));
+        panel.setLayout(new GridLayout(4,4, 10, 10)); // Creates grid layout
 
+        // Adding buttons to panel
         panel.add(numberButtons[1]);
         panel.add(numberButtons[2]);
         panel.add(numberButtons[3]);
@@ -104,6 +105,10 @@ public class JavaCalculator implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        for(int i = 0; i < 10; i++) {
+            if(e.getSource() == numberButtons[i]) {
+                textField.setText(textField.getText().concat(String.valueOf(i))); // When number button is clicked, add that button to calculator textField.
+            }
+        }
     }
 }
