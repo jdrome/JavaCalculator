@@ -79,6 +79,18 @@ public class JavaCalculator implements ActionListener {
         panel.add(numberButtons[2]);
         panel.add(numberButtons[3]);
         panel.add(addButton);
+        panel.add(numberButtons[4]);
+        panel.add(numberButtons[5]);
+        panel.add(numberButtons[6]);
+        panel.add(subButton);
+        panel.add(numberButtons[7]);
+        panel.add(numberButtons[8]);
+        panel.add(numberButtons[9]);
+        panel.add(mulButton);
+        panel.add(decButton);
+        panel.add(numberButtons[0]);
+        panel.add(equButton);
+        panel.add(divButton);
 
         // Add our different elements to our JFrame.
         frame.add(panel);
