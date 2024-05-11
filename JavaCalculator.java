@@ -123,5 +123,26 @@ public class JavaCalculator implements ActionListener {
             operator = '+';
             textField.setText("");
         }
+
+        // Add sub button functionality
+        if(e.getSource() == subButton) {
+            num1 = Double.parseDouble(textField.getText());
+            operator = '-';
+            textField.setText("");
+        }
+
+        // Add multiply button functionality
+        if(e.getSource() == mulButton) {
+            num1 = Double.parseDouble(textField.getText());
+            operator = '*';
+            textField.setText("");
+        }
+
+        // Add div button functionality
+        if(e.getSource() == addButton) {
+            num1 = Double.parseDouble(textField.getText());
+            operator = '/';
+            textField.setText("");
+        }
     }
 }
