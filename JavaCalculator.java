@@ -75,6 +75,11 @@ public class JavaCalculator implements ActionListener {
         panel.setBounds(60, 100, 300, 300);
         panel.setLayout(new GridLayout(4,4, 10, 10));
 
+        panel.add(numberButtons[1]);
+        panel.add(numberButtons[2]);
+        panel.add(numberButtons[3]);
+        panel.add(addButton);
+
         // Add our different elements to our JFrame.
         frame.add(panel);
         frame.add(delButton);
