@@ -105,10 +105,23 @@ public class JavaCalculator implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
+        // Add number buttons to textField
         for(int i = 0; i < 10; i++) {
             if(e.getSource() == numberButtons[i]) {
                 textField.setText(textField.getText().concat(String.valueOf(i))); // When number button is clicked, add that button to calculator textField.
             }
+        }
+
+        // Add decimal button to textField
+        if(e.getSource() == decButton) {
+            textField.setText(textField.getText().concat("."));
+        }
+
+        // Add add button functionality
+        if(e.getSource() == addButton) {
+            num1 = Double.parseDouble(textField.getText());
+            operator = '+';
+            textField.setText("");
         }
     }
 }
