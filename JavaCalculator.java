@@ -139,10 +139,31 @@ public class JavaCalculator implements ActionListener {
         }
 
         // Add div button functionality
-        if(e.getSource() == addButton) {
+        if(e.getSource() == divButton) {
             num1 = Double.parseDouble(textField.getText());
             operator = '/';
             textField.setText("");
+        }
+
+        if(e.getSource() == equButton) {
+            num2 = Double.parseDouble(textField.getText());
+
+            switch(operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+            }
+            textField.setText(String.valueOf(result));
+            num1 = result;
         }
     }
 }
