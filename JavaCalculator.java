@@ -103,6 +103,8 @@ public class JavaCalculator implements ActionListener {
     public static void main (String[] args) {
         JavaCalculator calculator = new JavaCalculator();
     }
+
+    // This method listens for actions (clicks) and executies the appropriate calculator function
     @Override
     public void actionPerformed(ActionEvent e) {
         // Add number buttons to textField
@@ -145,6 +147,7 @@ public class JavaCalculator implements ActionListener {
             textField.setText("");
         }
 
+        // Add equal button functionality
         if(e.getSource() == equButton) {
             num2 = Double.parseDouble(textField.getText());
 
@@ -164,6 +167,11 @@ public class JavaCalculator implements ActionListener {
             }
             textField.setText(String.valueOf(result));
             num1 = result;
+        }
+        
+        // Add clear button functionality
+        if(e.getSource() == clrButton) {
+            textField.setText("");
         }
     }
 }
