@@ -7,9 +7,9 @@ public class JavaCalculator implements ActionListener {
     JFrame frame;
     JTextField textField;
     JButton[] numberButtons = new JButton[10];
-    JButton[] functionButtons = new JButton[8];
+    JButton[] functionButtons = new JButton[9];
     JButton addButton, subButton, mulButton, divButton;
-    JButton decButton, equButton, delButton, clrButton;
+    JButton decButton, equButton, delButton, clrButton, negButton;
     JPanel panel; // Holds all our buttons
 
     Font myFont = new Font("Nanum Pen Script", Font.BOLD, 30);
@@ -40,6 +40,7 @@ public class JavaCalculator implements ActionListener {
         equButton = new JButton("=");
         delButton = new JButton("Del");
         clrButton = new JButton("Clr");
+        negButton = new JButton("(-)");
 
         // Adds JButtons to functioButtons array
         functionButtons[0] = addButton;
@@ -50,9 +51,10 @@ public class JavaCalculator implements ActionListener {
         functionButtons[5] = equButton;
         functionButtons[6] = delButton;
         functionButtons[7] = clrButton;
+        functionButtons[8] = negButton;
 
         // `For` loop iterates through all function buttons and ActionListener, font, and focusable settings.
-        for(int i = 0; i < 8; i++) {
+        for(int i = 0; i < 9; i++) {
             functionButtons[i].addActionListener(this);
             functionButtons[i].setFont(myFont);
             functionButtons[i].setFocusable(false); // Removes outliner on button
@@ -66,9 +68,10 @@ public class JavaCalculator implements ActionListener {
             numberButtons[i].setFocusable(false); // Removes outliner on button
         }
 
-        // Sets location for delButton and clrButton on Calculator frame
-        delButton.setBounds(50, 430, 145, 50);
-        clrButton.setBounds(205, 430, 145, 50);
+        // Sets location for negButton, delButton, and clrButton on Calculator frame
+        negButton.setBounds(60, 430, 100, 50);
+        delButton.setBounds(160, 430, 100, 50);
+        clrButton.setBounds(260, 430, 100, 50);
 
         // Instantiates panel to hold buttons
         panel = new JPanel();
@@ -95,6 +98,7 @@ public class JavaCalculator implements ActionListener {
 
         // Add our different elements to our JFrame.
         frame.add(panel);
+        frame.add(negButton);
         frame.add(delButton);
         frame.add(clrButton);
         frame.add(textField);
